@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+%center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+$base-color:#F1FADA;
+$text-color:#2D9596;
+$heading-color:#9AD0C2;
+$textbg-color:#265073;
+
+// $base-color:#e3ecf8;
+// $text-color:#E26EE5;
+// $heading-color:#7E30E1;
+// $textbg-color:#49108B;
+
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin:0px;
+    padding: 0px;
+    background-color: $base-color;
+    max-width: 100vw;
+    
+}
+
+h1{
+    font-family: "Anta", sans-serif;
+    margin: 0px;
+}
+
+.header{
+background-color:$textbg-color;
+height: 40vh;
+width: 100%;
+@extend %center;
+position: relative;
+text-align: center;
+margin-bottom: 5vh;
+border-end-end-radius: 60%;
+border-end-start-radius: 60%;
+    .container{
+        position: relative;
+        z-index: 9;
+        color: $heading-color ;
+    }
+    .logo-wrapper{
+    @extend %center;
+   
+    }
+
+    .logo{
+        
+        @extend %center;
+        border: 2px solid $heading-color;
+        height: 40px;
+        width: 40px;
+        border-radius:100% ;
+        padding: 1.5vh;
+        font-size: 30px;
+    }
+}
+// tabs styling
+.container2{
+   .recipeHeading{
+    color: $text-color;
+    text-align: center;
+    @extend %center;
+    }
+    .tabs{
+        gap: 40px;
+        margin-top: 3vh;
+        font-size: 20px;
+       color: $heading-color;
+       @extend %center;
+       cursor: pointer;
+   }
+   .tablist{
+    background-color: $textbg-color;
+    border-radius: 25px;
+    @extend %center;
+    gap: 9px;
+    padding: 10px;
+    width: 150px;
+   }
+   .active{
+    border: 3px solid black;
+    color: #fff;
+   }
+}
+@media(max-width:740px) {
+    .tabs{
+        flex-wrap: wrap;
+        // flex-direction: column;
+        // display: none;
+        .tablist{
+            
+            
+        }
+    }
+}
+@media(max-width:500px) {
+    .tabs{
+        // flex-wrap: wrap;
+        flex-direction: column;
+        // display: none;
+        .tablist{
+            
+            
+        }
+    }
+}
+//recipe banner styling
+.recipe_banner{
+    background-color: $textbg-color;
+    @extend %center;
+    margin: 0 auto;
+    margin-top:8vh ;
+    margin-bottom:8vh ;
+    min-height: 60vh;
+    width: 80vw;
+    border-radius: 15px;
+    padding: 30px;
+    gap: 20px;
+    .left-col{
+        height: 100%;
+        width: 50%;
+        color: $heading-color;
+        
+    }
+    ul{
+        @extend %center;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0px;
+        gap: 20px;
+        
+        padding: 0;
+    }
+    .right-col{
+        height: 100%;
+        width: 50%;
+
+        .image-wrapper{
+            height: 100%;
+            width: 100%;
+            
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            object-fit:fill;
+        }
+        }
+
+    }
+}
+
+@media(max-width:600px) {
+    .recipe_banner{
+        flex-direction: column;
+    }
+}
+
+.container3{
+    @extend %center;
+    flex-direction: column;
+    gap: 10vh;
+
+    .heading-line{
+        @extend %center;
+        flex-direction: column;
+        
+        strong{
+            color: #2D9596;
+            font-size: 5vw;
+            font-family: "Anta", sans-serif; 
+        }
+        .input-wrapper{
+            @extend %center;
+            flex-direction: column;
+            gap: 40px;
+            input{
+                margin-top: 4vh;
+                width: 45vw;
+                height: 7vh;
+                border-radius: 25px;
+                border: 1px solid #265073;
+                text-align: center;
+                font-size: 3vh;
+            }
+            button{
+                width: 55px;
+                margin-left: 1vw;
+                border-radius: 25px;
+                border: 1px solid $textbg-color;
+                background-color: #265073;
+                color: #9AD0C2;
+                height: 60px;
+                font-size: 25px;
+                text-align: center;
+                @extend %center;
+                flex-direction: column;
+            }
+        }
+    }
+    
+    .flexbox{
+       margin: 0px 4vw ;
+    }
+    img{
+        border: 1px solid $textbg-color;
+        border-radius: 25px;
+        width: 100%
+    }
+    p{
+        @extend %center;
+        text-align: center;
+    }
+}
+
